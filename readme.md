@@ -18,15 +18,15 @@ Make sure pip is [installed](https://pip.pypa.io/en/stable/installing/) and upgr
 
 Install the script
 
-'''
+~~~
 pip install lolsync
-'''
+~~~
 
 Run the script
 
-'''
+~~~
 lolsync
-'''
+~~~
 
 Enter in the username of a friend that you have on League of Legends, and then the script 
 will tell you whether or not they are free to play a game!
