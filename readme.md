@@ -6,19 +6,30 @@
 
 ## Requirements
 
-This script uses python 3.4 and below, must be run on Mac OS X, and you must have
+This script uses python 3.4, must be run on Mac OS X, and you must have
 a valid League of Legends username in the North American region to search for. 
 (If you don't know any, try searching the for players on the leaderboards at 
 http://www.lolking.net/leaderboards#/na/1, as these are the players that will likely
 be online.)
 
-## Running the program
+## Usage
 
-The program is a simple command line function that is started through entering
-'python3 lol-sync.py' in the command line. Ensure that necessary libraries have 
-been imported through the requirements.txt file. Enter in the username of a friend
-that you have on League of Legends, and then the script will tell you whether or
-not they are free to play a game!
+Make sure pip is [installed](https://pip.pypa.io/en/stable/installing/) and upgraded.
+
+Install the script
+
+'''
+pip install lolsync
+'''
+
+Run the script
+
+'''
+lolsync
+'''
+
+Enter in the username of a friend that you have on League of Legends, and then the script 
+will tell you whether or not they are free to play a game!
 
 ## Code Design
 
