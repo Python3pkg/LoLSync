@@ -1,13 +1,13 @@
 from setuptools import setup, find_packages
 setup(
   name = 'lolsync',
-  version = '0.12',
+  version = '0.13',
   description = 'Keep in sync with friends on League of Legends!',
   author = 'Jason Lin',
   author_email = 'jason_lin2@yahoo.com',
   license = 'MIT',
   url = 'https://github.com/jason2249/LoLSync',
-  download_url = 'https://github.com/jason2249/lolsync/tarball/0.12',
+  download_url = 'https://github.com/jason2249/lolsync/tarball/0.13',
   keywords = ['League of Legends', 'Friend', 'Sync'],
   classifiers = [
     'Operating System :: MacOS',
@@ -15,6 +15,7 @@ setup(
     'License :: OSI Approved :: MIT License',
     'Programming Language :: Python :: 3.4'
   ],
+  py_module=['lol_sync.py'],
   scripts=['lolsync'],
   install_requires = [
     'blessings>=1.6',

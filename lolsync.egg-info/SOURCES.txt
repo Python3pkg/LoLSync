@@ -1,7 +1,6 @@
+lolsync
 setup.cfg
 setup.py
-lolsync/__init__.py
-lolsync/lol_sync.py
 lolsync.egg-info/PKG-INFO
 lolsync.egg-info/SOURCES.txt
 lolsync.egg-info/dependency_links.txt
