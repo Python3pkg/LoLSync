@@ -116,6 +116,4 @@ def find_id(username):
 	else:
 		return None
 
-
-if __name__ == '__main__':
-	main()
+main()
