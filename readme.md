@@ -8,12 +8,14 @@
 
 This script only works on MacOS!
 
-Download [Python 3.4](https://www.python.org/downloads/release/python-343/) if needed.
+Download [Python 3.4.3](https://www.python.org/downloads/release/python-343/) if needed.
 
 Make sure /Library/Frameworks/Python.framework/Versions/3.4/bin (The path to execute
 Python 3.4 files) is in your [Shell Path](https://coolestguidesontheplanet.com/add-shell-path-osx/).
 
-#### Pip3
+If you'd like desktop notifications, install [terminal notifier](https://github.com/julienXX/terminal-notifier).
+
+#### Pip3 (recommended)
 
 Install or upgrade [Pip3](https://pip.pypa.io/en/stable/installing/) if necessary.
 (Follow the above instructions, but type python3 get-pip.py instead of python for pip3)
@@ -36,7 +38,7 @@ Run the script
 lolsync
 ~~~
 
-Enter in the username of a friend that you have on League of Legends, and then the script 
+Enter in the username of a friend that you have on League of Legends (NA only!), and then the script 
 will tell you whether or not they are free to play a game!
 
 ## Design
@@ -63,6 +65,15 @@ desktop notification to the user.
 ## Troubleshooting
 
 Riot's API acts strangely when requesting game time soon after a user starts a game. Be
-aware that this may return weird times when doing so. Also, sometimes requests to the API
-can bug out, causing bad information to be returned. Simply restart the script when this
-happens.
+aware that this may return weird times when doing so. Try requesting a user's game status
+starting around 30 seconds after they start a game to avoid this. Also, sometimes requests 
+to the API can bug out, causing bad information to be returned. Simply restart the script 
+when this happens.
+
+## TODOS
+
+ * Add ability to check for regions other than NA
+ * Add ability to track multiple friends from start
+ * Add ability to quit/add more people to check during checking screen
+ * Add more game information (queue type
+ * Add finished at time xx:xx to end screen

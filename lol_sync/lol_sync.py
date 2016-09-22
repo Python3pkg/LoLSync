@@ -9,6 +9,7 @@ and are ready to play!
 """
 import requests
 import time
+import calendar
 from blessings import Terminal
 import os
 import subprocess
@@ -22,7 +23,7 @@ def main():
 	Continues to prompt until a valid username is given, then calls the
 	check_in_game function to check when the user finishes their game.
 	"""
-	user_id = None            # TODO: Add ability to track multiple friends
+	user_id = None
 	username = input("Please enter the username of friend to track ('q' to quit): ")
 	if username == "q":
 		quit()
@@ -80,25 +81,27 @@ def check_in_game(user_id, username):
 	If the current game request is valid, then continuously makes a request until the game is not found.
 	Then notifies the user through a desktop notification that the game has been finished.
 	"""
-	# TODO: Add separate regions check
 	r = get_game_info(user_id)
 	if not r.ok:
 		print("User " + username + " is not currently in a game. Start one up now!")
 	else:
 		game_data = r.json()
 		game_start = game_data.get('gameStartTime')/1000
-		game_length = game_data.get('gameLength') + 360
+		game_length = calendar.timegm(time.gmtime()) - game_start
 		champion = get_champ_name(game_data, username)
 		os.system('clear')
 		print("User " + username + " is in game, currently playing " + champion + "!")
 		print("Game started at: ", end="")
 		print(time.strftime('%l:%M%p %Z on %b %d, %Y', time.localtime(game_start)))
-		while r.status_code != 404:  # while r.ok?
-			print_time(game_length, 3) 													# TODO: Add ability to quit/add more people to check
+		while r.status_code != 404:
+			print_time(game_length, 3)
 			game_length += 3
-			r = get_game_info(user_id)													# TODO: Add game updates (queue type)
+			r = get_game_info(user_id)
 		print("User " + username + " just finished their game. Start one up now!")
-		subprocess.call(["terminal-notifier", "-title", username + " finished their game!", "-message", "Start one up now!"])  # TODO: finished at time xxx
+		try:
+			subprocess.call(["terminal-notifier", "-title", username + " finished their game!", "-message", "Start one up now!"])
+		except:
+			pass
 	main()
 
 
