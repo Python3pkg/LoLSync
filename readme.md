@@ -6,7 +6,7 @@
 
 ![LoLSync Logo](https://i.imgur.com/qF8uF4T.png?1 "LoLSync Logo")
 
-## Installation
+## Requirements
 
 1. Download [Python 3.4.3](https://www.python.org/downloads/release/python-343/) if needed. (This script only works on this version!)
 
@@ -15,12 +15,14 @@ Python 3.4 files) is in your [Shell Path](https://coolestguidesontheplanet.com/a
 
 3. **(MacOS Only!)** If you'd like desktop notifications, install [terminal notifier](https://github.com/julienXX/terminal-notifier).
 
-4. #### Pip3 (recommended)
+## Installation
 
-Install or upgrade [Pip3](https://pip.pypa.io/en/stable/installing/) if necessary.
+#### Pip3 (recommended)
+
+1. Install or upgrade [Pip3](https://pip.pypa.io/en/stable/installing/) if necessary.
 (Follow the above instructions, but type python3 get-pip.py instead of python for pip3)
 
-Install the script
+2. Install the script and all requirements:
 
 ~~~
 pip3 install lolsync
@@ -28,9 +30,13 @@ pip3 install lolsync
 
 **OR**
 
-4. #### Manual
+#### Manual
 
-Download the tarball [here](https://pypi.python.org/pypi/lolsync), then download [requests](http://docs.python-requests.org/en/master/user/install/#install) and [blessings](https://pypi.python.org/pypi/blessings).
+1. Download the tarball [here](https://pypi.python.org/pypi/lolsync).
+
+2. Download [requests](http://docs.python-requests.org/en/master/user/install/#install).
+
+3. Download [blessings](https://pypi.python.org/pypi/blessings).
 
 ## Usage
 
