@@ -4,16 +4,16 @@
 
 *@author Jason Lin, jason0@stanford.edu*
 
+![LoLSync Logo](https://i.imgur.com/s2L91hs.png "LoLSync Logo")
+
 ## Installation
 
-This script only works on MacOS!
+1. Download [Python 3.4.3](https://www.python.org/downloads/release/python-343/) if needed. (This script only works on this version!)
 
-Download [Python 3.4.3](https://www.python.org/downloads/release/python-343/) if needed.
-
-Make sure /Library/Frameworks/Python.framework/Versions/3.4/bin (The path to execute
+2. Make sure /Library/Frameworks/Python.framework/Versions/3.4/bin (The path to execute
 Python 3.4 files) is in your [Shell Path](https://coolestguidesontheplanet.com/add-shell-path-osx/).
 
-If you'd like desktop notifications, install [terminal notifier](https://github.com/julienXX/terminal-notifier).
+3. **(MacOS Only!)** If you'd like desktop notifications, install [terminal notifier](https://github.com/julienXX/terminal-notifier).
 
 #### Pip3 (recommended)
 
@@ -77,3 +77,4 @@ when this happens.
  * Add ability to quit/add more people to check during checking screen
  * Add more game information (queue type
  * Add finished at time xx:xx to end screen
+ * Make compatible with more versions of python3 (ex. subprocess.run instead of call)
